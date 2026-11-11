@@ -71,3 +71,21 @@ label.mut{display:block;margin-top:14px}
 /* login */
 #login .card{margin-top:30px}
 #lmsg{color:var(--bad);font-weight:600;margin:8px 0}
+
+/* save for later + archive calendar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.save{border:1px solid var(--acc);background:transparent;color:var(--acc);border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer;transition:background .2s}
+.save.on{background:var(--acc);color:#fff}
+.modes{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px;margin:22px 0 4px}
+.modes button{flex:1;border:0;background:transparent;color:var(--ink);border-radius:999px;padding:9px 12px;font:inherit;font-size:16px;cursor:pointer}
+.modes button.on{background:var(--acc);color:#fff}
+.cal{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;margin:16px 0}
+.calh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-family:Georgia,serif;font-size:18px}
+.calnav{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;width:38px;height:38px;font-size:20px;cursor:pointer}
+.calnav:disabled{opacity:.3;cursor:default}
+.cgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.dow{font:600 12px system-ui;color:var(--mut);padding:4px 0}
+.cd{aspect-ratio:1;display:grid;place-items:center;border:0;border-radius:50%;background:transparent;color:var(--mut);font:inherit;font-size:15px}
+.cd.tod{font-weight:700;color:var(--ink)}
+.cd.has{background:var(--bg);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--acc);cursor:pointer}
+.cd.has.sel{background:var(--acc);color:#fff}
