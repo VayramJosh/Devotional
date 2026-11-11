@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="admin-wrap">
+
+  <div id="login" hidden>
+    <div class="card">
+      <h2>Admin sign in</h2>
+      <input id="pw" type="password" placeholder="Admin password" autocomplete="current-password">
+      <div id="lmsg"></div>
+      <button class="btn wide" id="loginBtn">Sign in</button>
+    </div>
+  </div>
+
+  <div id="app" hidden>
+  <div class="bar" id="bar"><span id="barText"></span><button class="btn small ghost" id="logout">Sign out</button></div>
+
+  <nav>
+    <button id="tabUpload" class="on">Upload</button>
+    <button id="tabPosts">Schedule</button>
+  </nav>
+
+  <div id="paneUpload">
+    <div class="card">
+      <h2 id="ftitle">New post</h2>
+      <input id="title" placeholder="Title">
+
+      <label class="mut">🎧 Audio file</label>
+      <input id="audio" type="file" accept="audio/*">
+
+      <label class="mut">📄 Text: choose a .txt file, or paste below</label>
+      <input id="txtfile" type="file" accept=".txt,text/plain">
+      <textarea id="english" style="min-height:220px" placeholder="Written devotional…"></textarea>
+
+      <label class="mut">🌐 Translation (optional): language name, then choose a .txt file or paste below</label>
+      <input id="olang" placeholder="Language (e.g. Twi, French, Russian)">
+      <input id="otxtfile" type="file" accept=".txt,text/plain">
+      <textarea id="otext" style="min-height:220px" placeholder="Translation…"></textarea>
+
+      <label class="mut">⏰ When should it go live?</label>
+      <div class="opts">
+        <button class="opt on" id="oNow" type="button">⚡ Post now</button>
+        <button class="opt" id="oLater" type="button">🗓 Schedule</button>
+      </div>
+      <div class="dtrow off" id="dtrow"><input id="when" type="datetime-local"></div>
+
+      <div id="msg"></div>
+      <button class="btn wide" id="save">Post now</button>
+      <div class="row" style="margin-top:10px"><button class="btn ghost" id="cancel" hidden>Cancel editing</button></div>
+    </div>
+  </div>
+
+  <div id="panePosts" hidden>
+    <div id="list"></div>
+  </div>
+  </div>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>
